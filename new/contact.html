@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Contact Me</h1>
+    </header>
+    <section>
+        <p>Feel free to get in touch with me. Here are my contact details:</p>
+        <ul>
+            <li>Email: thatthis449@gmail.com</li>
+            <li>GitHub: Isaac-News</li>
+        </ul>
+        <form action="submit_form.php" method="POST">
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name"><br>
+            <label for="message">Message:</label><br>
+            <textarea id="message" name="message"></textarea><br>
+            <input type="submit" value="Send Message">
+        </form>
+    </section>
+    <footer>
+        <p>Created by Isaac Osiemo</p>
+    </footer>
+    <script>document.querySelector('form').addEventListener('submit', function(e) {
+        let name = document.querySelector('#name').value;
+        if (name === "") {
+            alert("Please enter your name.");
+            e.preventDefault();
+        }
+    });
+    </script>
+</body>
+</html>
+
